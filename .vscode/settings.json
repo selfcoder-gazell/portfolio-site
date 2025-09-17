@@ -1,0 +1,35 @@
+{
+    "liveServer.settings.port": 5501
+}
+
+// What it is
+
+// Folder: .vscode → stores VS Code project-specific settings.
+
+// File: settings.json → contains configuration for this project.
+
+// Your current content:
+
+// {
+//     "liveServer.settings.port": 5501
+// }
+
+
+// Means:
+
+// The Live Server extension will run your project on port 5501 instead of the default port.
+
+// This allows you to preview your website locally in a browser and see changes instantly when you save files.
+
+// What you should do
+
+// Nothing is required.
+
+// Keep the folder and file — it’s project-specific and safe to commit to GitHub if you like.
+
+// You can ignore it if you want, but it’s helpful because it saves your Live Server settings for this project.
+
+// You don’t have to change anything unless you want a different port.
+
+// Tip: Many developers do include .vscode in their repos, but some prefer to add it to .gitignore so personal VS Code settings aren’t shared. For a portfolio project, it’s okay to leave it.
+
