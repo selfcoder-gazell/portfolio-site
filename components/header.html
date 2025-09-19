@@ -1,56 +1,14 @@
-<!-- components/header.html -->
 <header>
-  <!-- Logo + site name -->
   <a href="index.html" class="logo-container">
     <img src="images/sunshine_1024.png" alt="Logo" class="logo">
     <span class="site-name">Kveta Mooney</span>
   </a>
 
-  <!-- Navigation for larger screens -->
   <nav>
-    <!-- Theme toggle button (desktop) -->
-    <button id="theme-toggle" class="theme-toggle">
-      <span class="icon-wrapper">
-        <!-- Start with sun icon; will toggle with JavaScript -->
-        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
-          <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
-          <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
-          <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
-          <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/>
-        </svg>
-      </span>
-    </button>
-
-    <!-- Standard inline navigation links -->
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hamburger menu button (visible on small screens only) -->
-  <button class="burger" aria-label="Menu">
-    <span></span>
-    <span></span>
-  </button>
-</header>
-
-<!-- Dark overlay (appears when side menu is open) -->
-<div class="overlay"></div>
-
-<!-- Side menu for small screens -->
-<div class="side-menu" id="side-menu">
-  <!-- Theme toggle button (mobile) -->
-  <button id="theme-toggle-mobile" class="theme-toggle">
+    <!-- Toggle + menu for big screens -->
+     <button id="theme-toggle" class="theme-toggle">
     <span class="icon-wrapper">
-      <!-- Start with sun icon; will toggle with JavaScript -->
+      <!-- Start with sun, will toggle with JS -->
       <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
         <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
@@ -64,12 +22,18 @@
       </svg>
     </span>
   </button>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- Mobile navigation links -->
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</div>
+  <!-- Burger menu (only small screens) -->
+  <button class="burger" aria-label="Menu">
+    <span></span>
+    <span></span>
+  </button>
+</header>
+

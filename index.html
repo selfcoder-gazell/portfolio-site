@@ -17,7 +17,6 @@
 
 <link rel="stylesheet" href="styles/footer.css">
 
- 
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
@@ -26,20 +25,18 @@
   <link rel="stylesheet" href="styles/layout.css">
 
   <!-- Overlay & Slide-in menu will be in header component -->
-  
+
   <!-- JS Files (Load in order) -->
   <!-- Menu first, so overlay/burger works -->
-  
 </head>
 <body>
-  <!-- Header placeholder -->
-  <div id="header-placeholder"></div>
+<!-- Header placeholder -->
+  <div id="header-container"></div>
 <!-- Header Component -->
-  
 
   <main class="debug">
     <!-- Your main content goes here -->
- 
+
     <!-- Hero Section -->
     <section class="hero">
       <h2>Welcome to My Portfolio</h2>
@@ -74,11 +71,17 @@
       <p>If you’d like to get in touch, please reach out by email.</p>
     </section>
   </main>
+  <script src="scripts/main.js" defer></script>
+  <!-- Optional: main.js if using imports -->
+  <script src="scripts/load-header.js" defer></script>
   <script src="scripts/menu.js" defer></script>
   <!-- Theme toggle next -->
   <script src="scripts/theme.js" defer></script>
-  <!-- Optional: main.js if using imports -->
+
   <!-- <script type="module" src="scripts/main.js" defer></script> -->
+
+    <!-- <script src="scripts/load-footer.js" defer></script> -->
+
 </body>
 </html>
 
