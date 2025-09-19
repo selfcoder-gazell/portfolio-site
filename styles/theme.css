@@ -1,0 +1,17 @@
+/* -----------------------------
+   Theme (Light/Dark Mode)
+------------------------------ */
+
+/* Dark mode overrides */
+body.dark-mode {
+  --header-bg: #222;
+  --text-color: #ddd;
+  --bg-color: #111;
+}
+
+/* Alternative dark theme with data-theme */
+[data-theme="dark"] {
+  --bg-color: #222;
+  --text-color: #f5f5f5;
+  --link-hover: #bbb;
+}

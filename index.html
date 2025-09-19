@@ -1,3 +1,85 @@
-<!-- # Home page -->
-<div id="header-placeholder"></div>
-<script src="scripts/loadHeader.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kveta Mooney Portfolio</title>
+    <meta name="description" content="Portfolio website of Kveta Mooney, showcasing projects and skills.">
+     <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/sunshine_1024.png">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/grid.css">
+  <link rel="stylesheet" href="styles/header.css">
+<link rel="stylesheet" href="styles/theme.css">
+
+<link rel="stylesheet" href="styles/components.css">
+
+<link rel="stylesheet" href="styles/footer.css">
+
+ 
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/layout.css">
+
+  <!-- Overlay & Slide-in menu will be in header component -->
+  
+  <!-- JS Files (Load in order) -->
+  <!-- Menu first, so overlay/burger works -->
+  
+</head>
+<body>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+<!-- Header Component -->
+  
+
+  <main class="debug">
+    <!-- Your main content goes here -->
+ 
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Welcome to My Portfolio</h2>
+      <p>This is a short introduction text that spans the full width of the grid.</p>
+    </section>
+
+    <!-- Content + Sidebar -->
+    <div class="content-with-sidebar">
+      <div class="content">
+        <h2>Main Content</h2>
+        <p>This is the main content area. It spans 9 columns out of 12.</p>
+      </div>
+      <div class="sidebar">
+        <h2>Sidebar</h2>
+        <p>This is the sidebar. It spans 3 columns.</p>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <section class="projects-section" id="projects">
+      <h2>My Projects</h2>
+      <div class="projects">
+        <div class="project-card">Project 1</div>
+        <div class="project-card">Project 2</div>
+        <div class="project-card">Project 3</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <p>If you’d like to get in touch, please reach out by email.</p>
+    </section>
+  </main>
+  <script src="scripts/menu.js" defer></script>
+  <!-- Theme toggle next -->
+  <script src="scripts/theme.js" defer></script>
+  <!-- Optional: main.js if using imports -->
+  <!-- <script type="module" src="scripts/main.js" defer></script> -->
+</body>
+</html>
+
+

@@ -1,0 +1,59 @@
+/* -----------------------------
+   Grid Layout Setup
+------------------------------ */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+}
+
+/* Debug Guidelines */
+main.debug {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.08),
+    rgba(0, 0, 255, 0.08) 2px,
+    transparent 2px,
+    transparent calc(100% / 12)
+  );
+}
+
+/* Section Styles */
+section {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Content + Sidebar Layout */
+.content-with-sidebar {
+  display: contents;
+}
+
+.content {
+  grid-column: span 9;
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.sidebar {
+  grid-column: span 3;
+  background: #e0e0e0;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .content,
+  .sidebar {
+    grid-column: span 12;
+  }
+}
