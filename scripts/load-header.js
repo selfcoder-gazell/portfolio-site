@@ -1,17 +1,32 @@
-// load-header.js
-document.addEventListener('DOMContentLoaded', () => {
-  fetch('components/header.html')
-    .then(response => response.text())
-    .then(html => {
-      // Inject header HTML
-      document.getElementById('header-container').innerHTML = html;
+// scripts/load-header.js
+function loadHeader() {
+  const headerContainer = document.querySelector('header-container'); // optional container in index.html
+  if (!headerContainer) return;
 
-      // Initialize menu and theme toggle
-      if (typeof initMenu === 'function') initMenu();
-      if (typeof initTheme === 'function') initTheme();
+  fetch('components/header.html')
+    .then(res => res.text())
+    .then(html => {
+      headerContainer.innerHTML = html;
     })
     .catch(err => console.error('Error loading header:', err));
-});
+}
+
+document.addEventListener('DOMContentLoaded', loadHeader);
+
+// load-header.js
+// document.addEventListener('DOMContentLoaded', () => {
+//   fetch('components/header.html')
+//     .then(response => response.text())
+//     .then(html => {
+//       // Inject header HTML
+//       document.getElementById('header-container').innerHTML = html;
+
+//       // Initialize menu and theme toggle
+//       if (typeof initMenu === 'function') initMenu();
+//       if (typeof initTheme === 'function') initTheme();
+//     })
+//     .catch(err => console.error('Error loading header:', err));
+// });
 
 //
 //

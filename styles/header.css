@@ -14,6 +14,7 @@ header {
   z-index: 1000;
 }
 
+/* Logo + Site name */
 .logo-container {
   display: flex;
   align-items: center;
@@ -32,7 +33,9 @@ header {
   white-space: nowrap;
 }
 
-/* Nav - Desktop */
+/* -----------------------------
+   Nav - Desktop
+------------------------------ */
 nav {
   display: flex;
   align-items: center;
@@ -54,7 +57,9 @@ nav {
   color: var(--text-color);
 }
 
-/* Theme Toggle */
+/* -----------------------------
+   Theme Toggle (desktop + mobile)
+------------------------------ */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -80,17 +85,20 @@ nav {
   transition: all 0.2s ease;
 }
 
+/* Margin adjustments */
 header .theme-toggle {
   margin-left: 1rem;
 }
 
 .side-menu .theme-toggle {
-  margin: 0.5rem 0 0.5rem 1rem;
+  margin: 0.5rem 0 1rem 0;
   display: flex;
   justify-content: flex-start;
 }
 
-/* Burger Menu */
+/* -----------------------------
+   Burger Menu (mobile only)
+------------------------------ */
 .burger {
   display: none;
   flex-direction: column;
@@ -101,7 +109,7 @@ header .theme-toggle {
   cursor: pointer;
   padding: 0.5rem;
   position: relative;
-  z-index: 1105;
+  z-index: 1105; /* above overlay & menu */
 }
 
 .burger span {
@@ -112,37 +120,45 @@ header .theme-toggle {
   transition: all 0.3s ease;
 }
 
+/* Burger animation to X */
 .burger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .burger.open span:nth-child(2) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Overlay */
+/* -----------------------------
+   Overlay (dark background)
+------------------------------ */
 .overlay {
-  position: fixed;
-  inset: 0;
-  top: 60px;
-  background: rgba(0,0,0,0.5);
   display: none;
+  position: fixed;
+  top: 60px; /* adjust to header height */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: rgba(0,0,0,0.5);
   z-index: 1100;
 }
 
-/* Side Menu */
+/* -----------------------------
+   Side Menu (slide-in from right)
+------------------------------ */
 .side-menu {
   position: fixed;
-  top: 60px;
+  top: 60px; /* below header */
   right: 0;
-  width: 120px;
+  width: 200px;
   height: calc(100% - 60px);
   background: var(--header-bg);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transform: translateX(100%);
-  transition: transform 0.28s ease;
+  transform: translateX(100%); /* hidden by default */
+  transition: transform 0.3s ease;
   z-index: 1101;
 }
 
@@ -166,7 +182,9 @@ header .theme-toggle {
   font-size: 1.2rem;
 }
 
-/* Responsive */
+/* -----------------------------
+   Responsive Rules
+------------------------------ */
 @media (max-width: 480px) {
   .nav-links,
   #theme-toggle {
